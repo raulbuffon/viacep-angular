@@ -14,8 +14,6 @@ export class ViacepService {
   }
 
   getCep(url: string) {
-    return this.http.get(this.baseUrl + url).subscribe(response => {
-      console.log(response);
-    });
+    return this.http.get(this.baseUrl + url);
   }
 }

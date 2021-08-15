@@ -19,6 +19,8 @@ export class CepValueComponent implements OnInit {
   }
 
   getCepFromService() {
-    this.viacep.getCep('90050280/json/');
+    this.viacep.getCep('90050280/json/').subscribe(response =>
+      console.log(response)
+    );
   }
 }
