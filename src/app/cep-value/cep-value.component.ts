@@ -11,12 +11,9 @@ import { ViacepService } from '../viacep.service';
 export class CepValueComponent implements OnInit {
   cepInfo : CepInformations = new CepInformations();
 
-  constructor(private viacep: ViacepService, private http: HttpClient) {
-    
-  }
+  constructor(private viacep: ViacepService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   getCepFromService() {
     this.viacep.getCep('90050280/json/').subscribe(response =>
@@ -28,9 +25,6 @@ export class CepValueComponent implements OnInit {
     let objectToJson : any = JSON.stringify(input); 
     let jsonObject : any = JSON.parse(objectToJson);
     this.cepInfo = <CepInformations>jsonObject;
-
-    // console.log(input);
-    // console.log(this.cepInfo);
   }
 
   getValues() {
