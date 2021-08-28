@@ -16,18 +16,11 @@ export class CepValueComponent implements OnInit {
   ngOnInit(): void {}
 
   getCepFromService() {
-    this.viacep.getCep('90050280/json/').subscribe(response =>
-      this.deserialize(response)
+    this.viacep.getCep('90050280/json/').subscribe(response => {
+        this.cepInfo = <CepInformations>response;
+      }
     );
-  }
 
-  deserialize(input: any) {
-    let objectToJson : any = JSON.stringify(input); 
-    let jsonObject : any = JSON.parse(objectToJson);
-    this.cepInfo = <CepInformations>jsonObject;
-  }
-
-  getValues() {
-    return this.getCepFromService();
+    return this.cepInfo;
   }
 }

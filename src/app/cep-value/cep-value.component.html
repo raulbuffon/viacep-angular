@@ -1,3 +1,7 @@
-<p>cep-value works!</p>
-<button (click)="getValues()">Search</button>
+<h1>VIACEP APP</h1>
+<form action="" method="get">
+    <label for="">Type the CEP you want to search:</label><br>
+    <input type="text"><br>
+    <input (click)="getCepFromService()" type="button" value="Search">
+</form>
 <p>{{cepInfo | json}}</p>
