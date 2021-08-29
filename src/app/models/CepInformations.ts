@@ -9,8 +9,4 @@ export class CepInformations {
     gia!: string;
     ddd!: string;
     siafi!: string;
-
-    constructor() {
-
-    }
 }

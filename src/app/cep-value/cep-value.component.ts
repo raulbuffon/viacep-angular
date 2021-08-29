@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CepInformations } from '../models/CepInformations';
 import { ViacepService } from '../viacep.service';
