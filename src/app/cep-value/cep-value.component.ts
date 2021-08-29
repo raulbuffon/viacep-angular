@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { CepInformations } from '../models/CepInformations';
 import { ViacepService } from '../viacep.service';
@@ -9,25 +8,19 @@ import { ViacepService } from '../viacep.service';
   styleUrls: ['./cep-value.component.css']
 })
 export class CepValueComponent implements OnInit {
-  cepInfo : CepInformations = new CepInformations();
+  public cepInfo : CepInformations = new CepInformations();
+  public cepNumber : number = 0;
 
   constructor(private viacep: ViacepService) {}
 
   ngOnInit(): void {}
 
   getCepFromService() {
-    this.viacep.getCep('90050280/json/').subscribe(response =>
-      this.deserialize(response)
+    this.viacep.getCep(this.cepNumber.toString()).subscribe(response => {
+        this.cepInfo = <CepInformations>response;
+      }
     );
-  }
 
-  deserialize(input: any) {
-    let objectToJson : any = JSON.stringify(input); 
-    let jsonObject : any = JSON.parse(objectToJson);
-    this.cepInfo = <CepInformations>jsonObject;
-  }
-
-  getValues() {
-    return this.getCepFromService();
+    return this.cepInfo;
   }
 }

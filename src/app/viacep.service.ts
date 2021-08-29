@@ -6,14 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ViacepService {
-
   baseUrl = 'https://viacep.com.br/ws/';
+  finalBaseUrl = '/json/';
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor(private http: HttpClient) {}
 
   getCep(url: string) {
-    return this.http.get(this.baseUrl + url);
+    return this.http.get(this.baseUrl + url + this.finalBaseUrl);
   }
 }

@@ -1,3 +1,10 @@
-<p>cep-value works!</p>
-<button (click)="getValues()">Search</button>
+<h1>VIACEP APP</h1>
+
+<div>
+    <label for="">Type the CEP you want to search:</label><br>
+    <!-- <input type="text" placeholder="Cep" [(ngModel)]="cepNumber"><br> -->
+    <input [(ngModel)]="cepNumber">
+</div>
+
+<button (click)="getCepFromService()">Search</button>
 <p>{{cepInfo | json}}</p>
