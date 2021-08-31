@@ -1,10 +1,9 @@
 <h1>VIACEP APP</h1>
 
-<div>
-    <label for="">Type the CEP you want to search:</label><br>
-    <!-- <input type="text" placeholder="Cep" [(ngModel)]="cepNumber"><br> -->
-    <input [(ngModel)]="cepNumber">
+<div class="test">
+    <label id="" class="cep-label" for="cep-input">Type the CEP you want to search:</label><br>
+    <input id="cep-input" [(ngModel)]="cepNumber"><br>
+    <button id="" class="btn-search" (click)="getCepFromService()">Search</button>
 </div>
 
-<button (click)="getCepFromService()">Search</button>
 <p>{{cepInfo | json}}</p>

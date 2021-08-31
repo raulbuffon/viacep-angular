@@ -1,0 +1,37 @@
+.cep-label {
+    font-size: xx-large;
+    /* font-family: 'Rubik', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+#cep-input {
+    width: 35%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.btn-search {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #bb1234;
+}
+
+.btn-search:active {
+    background-color: #bb1234;
+    transform: translateY(2px);
+  }
+
+.test {
+    text-align: center;
+}
