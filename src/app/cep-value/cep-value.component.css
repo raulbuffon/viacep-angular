@@ -1,29 +1,18 @@
-/* .circle {
-    position: absolute;
-    top: -870px;
-    left: 450px;
-    height: 1000px;
-    width: 1000px;
-    border-radius: 100%;
-    background-color: teal;
-} */
-
 .title {
-    position: relative;
-    top: -50px;
-    font-size: 40px;
     font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    position: relative;
     text-align: center;
+    top: -20px;
 }
 
-.cep-search {
+.div-cep-search {
     padding-top: 5%;
     text-align: center;
 }
 
 .cep-label {
     font-size: xx-large;
-    /* font-family: 'Rubik', sans-serif; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -46,23 +35,38 @@
     cursor: pointer;
 }
 
-/* .btn-search:hover {
-    background-color: #bb1234;
-} */
-
 .btn-search:active {
     background-color: #bb1234;
-    /* transform: translateY(2px); */
 }
 
-.cep-info {
-    /* background-color: #bb1234; */
-    margin: 0 auto;
-    padding-top: 5%;
-    font-size: 18px;
+.div-cep-info {
+    background-color: #bb1234;
+    border-radius: 10px;
+    color: whitesmoke;
     font-family: 'Roboto', sans-serif;
+    margin: 3% auto;
+    padding-top: 5px;
+    width: 40%;
 }
 
-.td-test {
-    padding: 0 0 0 400px;
+table {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.table-cep-info {
+    margin: 0 auto;
+}
+
+.row-cep-label {
+    text-align: center;
+    font-size: 22px;
+}
+
+.row-cep-info {
+    font-size: 18px;
+}
+
+.td-cep-info {
+    padding: 0 0 0 200px; 
 }
