@@ -9,7 +9,7 @@ import { ViacepService } from '../viacep.service';
 })
 export class CepValueComponent implements OnInit {
   public cepInfo : CepInformations = new CepInformations();
-  public cepNumber : number = 0;
+  public cepNumber! : number;
 
   constructor(private viacep: ViacepService) {}
 

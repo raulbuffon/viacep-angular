@@ -1,10 +1,31 @@
-<h1>VIACEP APP</h1>
-
-<div>
-    <label for="">Type the CEP you want to search:</label><br>
-    <!-- <input type="text" placeholder="Cep" [(ngModel)]="cepNumber"><br> -->
-    <input [(ngModel)]="cepNumber">
+<div class="title">
+    <h1>PEGACEP</h1>
 </div>
 
-<button (click)="getCepFromService()">Search</button>
-<p>{{cepInfo | json}}</p>
+<div class="div-cep-search">
+    <label id="" class="cep-label" for="cep-input">Type the CEP you want to search:</label><br>
+    <input id="cep-input" [(ngModel)]="cepNumber"><br>
+    <button id="" class="btn-search" (click)="getCepFromService()">Search</button>
+</div>
+
+<div *ngIf="cepInfo.cep != null" class="div-cep-info">
+    <p class="row-cep-label">Here are your CEP search informations</p>
+    <table class="table-cep-info">
+        <tr>
+            <td class="row-cep-info">
+                <p>CEP: {{cepInfo.cep}}</p>
+                <p>Logradouro: {{cepInfo.logradouro}}</p>
+                <p>Complemento: {{cepInfo.complemento}}</p>
+                <p>Bairro: {{cepInfo.bairro}}</p>
+                <p>Localidade: {{cepInfo.localidade}}</p>
+            </td>
+            <td class="row-cep-info td-cep-info">
+                <p>UF: {{cepInfo.uf}}</p>
+                <p>IBGE: {{cepInfo.ibge}}</p>
+                <p>GIA: {{cepInfo.gia}}</p>
+                <p>DDD: {{cepInfo.ddd}}</p>
+                <p>SIAFI: {{cepInfo.siafi}}</p>
+            </td>
+        </tr>
+    </table>
+</div>

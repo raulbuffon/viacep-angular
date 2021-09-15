@@ -1,0 +1,72 @@
+.title {
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    top: -20px;
+}
+
+.div-cep-search {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.cep-label {
+    font-size: xx-large;
+    font-family: 'Roboto', sans-serif;
+}
+
+#cep-input {
+    width: 35%;
+    padding: 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.btn-search {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    cursor: pointer;
+}
+
+.btn-search:active {
+    background-color: #bb1234;
+}
+
+.div-cep-info {
+    background-color: #bb1234;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    margin: 3% auto;
+    padding-top: 5px;
+    width: 40%;
+}
+
+table {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.table-cep-info {
+    margin: 0 auto;
+}
+
+.row-cep-label {
+    text-align: center;
+    font-size: 22px;
+}
+
+.row-cep-info {
+    font-size: 18px;
+}
+
+.td-cep-info {
+    padding: 0 0 0 200px; 
+}

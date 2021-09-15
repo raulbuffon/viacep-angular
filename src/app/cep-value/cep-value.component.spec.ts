@@ -51,6 +51,7 @@ describe('CepValueComponent', () => {
   });
 
   it('should validate ', () => {
+    component.cepNumber = 0;
     component.getCepFromService();
     expect(component.cepInfo).toEqual(<CepInformations>jsonExpectedResponse);
    });
