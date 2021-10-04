@@ -9,14 +9,14 @@ import { ViacepService } from '../viacep.service';
 })
 export class CepValueComponent implements OnInit {
   public cepInfo : CepInformations = new CepInformations();
-  public cepNumber! : number;
+  public cepNumber! : string;
 
   constructor(private viacep: ViacepService) {}
 
   ngOnInit(): void {}
 
   getCepFromService() {
-    this.viacep.getCep(this.cepNumber.toString()).subscribe(response => {
+    this.viacep.getCep(this.cepNumber).subscribe(response => {
         this.cepInfo = <CepInformations>response;
       }
     );
